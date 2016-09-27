@@ -29,15 +29,8 @@ let earth = ("Earth", 1, 365.26, true)
 let mars = ("Mars", 2, 686.97, false)
 
 func planetInfoTuple(planet: (String, Int, Double, Bool)) {
-    var moonNoun = "moon"
-    if planet.1 != 1 {
-        moonNoun = "moons"
-    }
-    var hasLifeString = "has life"
-    if !planet.3 {
-        hasLifeString = "does not have life"
-    }
-    print("\(planet.0) has \(planet.1) \(moonNoun). Its orbit is \(planet.2) days. It \(hasLifeString).")
+
+    print("\(planet.0) has \(planet.1). Its orbit is \(planet.2) days.")
 }
 
 planetInfoTuple(planet: earth)
@@ -75,15 +68,7 @@ let earth2 = Planet(name: "Earth", numberOfMoons: 1, orbitalPeriod: 365.26, hasL
 let mars2 = Planet(name: "Mars", numberOfMoons: 2, orbitalPeriod: 685.97, hasLife: false)
 
 func planetInfoObject(planet: Planet) {
-    var moonNoun = "moon"
-    if planet.numberOfMoons != 1 {
-        moonNoun = "moons"
-    }
-    var hasLifeString = "has life"
-    if !planet.hasLife {
-        hasLifeString = "does not have life"
-    }
-    print("\(planet.name) has \(planet.numberOfMoons) \(moonNoun). Its orbit is \(planet.orbitalPeriod) days. It \(hasLifeString).")
+       print("\(planet.name) has \(planet.numberOfMoons) . Its orbit is \(planet.orbitalPeriod) days. ")
 }
 
 planetInfoObject(planet: earth2)
